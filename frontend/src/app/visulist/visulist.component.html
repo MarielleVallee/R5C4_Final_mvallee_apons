@@ -1,0 +1,21 @@
+<button (click)="pagePrecedente()"> Page Précédente </button>
+<button (click)="pageSuivante()"> Page Suivante </button>
+
+
+<ul> 
+    @for (entree of entrees; track $index){
+        <li> 
+            <p> Entrée n°{{ entree.id}}</p>
+            <p> Algorithme utiliser : {{ entree.algorithm}}</p>
+            <p> Largeur : {{ entree.grid_width}}</p>
+            <p> Hauteur : {{ entree.grid_height}}</p>
+            <p> Type de mouvement : {{ entree.move_type}}</p>
+            <p> Début : {{ entree.start}}</p>
+            <p> Fin : {{ entree.end}}</p>
+            <p> Nombre de pas : {{ entree.path_length}}</p>
+            <p> Noeuds visités : {{ entree.visited_nodes}}</p>
+            <p> Temps : {{ entree.time_ns}}</p>
+        </li>
+    }
+</ul>
+

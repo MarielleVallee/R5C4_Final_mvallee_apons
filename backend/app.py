@@ -6,6 +6,7 @@ app = Flask(__name__)
 
 # Attention, si vous faites tourner le code sur un pc de l'IUT, il est possible que vous deviez 
 # impérativement préciser l'origine autorisée, c'est à dire le port occupé par votre front, au lieu du "*"
+#CORS(app, resources={r"/*": {"origins": "*", "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"]}})
 CORS(app, resources={r"/*": {"origins": "*", "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"]}})
 
 # votre fichier app ne devrait pas contenir de routes, seulement les imports et l'instanciation de l'application...

@@ -23,7 +23,7 @@ def get_search():
 
 #Une route permettant de récupérer toutes les données du fichier `searches.json`, qui sera utilisée pour la visualisation
 
-@search_bp.get('/Allsearches')
+@search_bp.get('/searchAll')
 def get_search_all():
     try:
         # Ouvrir et lire les données depuis le fichier JSON
