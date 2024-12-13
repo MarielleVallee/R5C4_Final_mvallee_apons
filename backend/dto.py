@@ -1,13 +1,16 @@
-task_dto = {
+search_dto = {
   "type": "object",
   "properties": {
-    "nom": {"type": "string"},
-    "description": {"type": "string"},
-    "categorie": {"type": "string"},
-    "statut": {"type": "string"},
-    "priorite": {"type": "string"},
-    "utilisateur": {"type": "string"},
+    "id": 1,
+    "algorithm": "Djikstra",
+    "grid_width": 10,
+    "grid_height": 10,
+    "move_type": "orthogonal",
+    "start": [0, 0],
+    "end": [9, 9],
+    "path_length": 18,
+    "visited_nodes": 100,
+    "time_ns": 1500
   },
-  "required": ["nom", "description", "categorie", "statut", "priorite", "utilisateur"],
-  "additionalProperties": False
+   "required": ["id", "algorithm", "grid_width", "grid_height", "move_type", "start", "end", "path_length", "visited_nodes", "time_ns"]
 }

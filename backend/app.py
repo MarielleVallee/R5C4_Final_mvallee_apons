@@ -1,7 +1,6 @@
-from flask import Flask
+from flask import Flask, jsonify
 from flask_cors import CORS
-from task_controller import task_bp
-from statistics_controller import stat_bp
+from search_controller import search_bp
 
 app = Flask(__name__)
 
@@ -10,8 +9,7 @@ app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*", "methods": ["GET", "POST", "PUT", "DELETE", "OPTIONS"]}})
 
 # votre fichier app ne devrait pas contenir de routes, seulement les imports et l'instanciation de l'application...
-app.register_blueprint(task_bp)
-app.register_blueprint(stat_bp)
+app.register_blueprint(search_bp)
 
 # ...à l'exception d'un hello world éventuellement
 @app.get('/')
