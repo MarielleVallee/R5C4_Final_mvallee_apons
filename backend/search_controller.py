@@ -26,4 +26,14 @@ def get_search_all():
         return {"message": "Error parsing JSON"}, 400
 
 #pour la création d'une donnée
+@search_bp.post('/create')
+def create_search():
+    return jsonify({"error": "Method not implemented"}), 501
 
+@search_bp.put('/<string:id>')
+def update(id):
+    return jsonify({"error": "Method not implemented"}), 501
+
+@search_bp.delete('/<string:id>')
+def delete(id):
+    return jsonify({"error": "Method not implemented"}), 501
